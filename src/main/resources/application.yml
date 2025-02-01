@@ -1,0 +1,11 @@
+server:
+  port: 8342
+  servlet:
+    context-path: /test
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: testDb
