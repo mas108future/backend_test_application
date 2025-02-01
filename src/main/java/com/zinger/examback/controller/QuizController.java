@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // Allow all origins
 @RestController
 @RequestMapping("/api/quizzes")
 public class QuizController {
@@ -21,6 +22,7 @@ public class QuizController {
 
     @PostMapping
     public Quiz createQuiz(@RequestBody Quiz quiz) {
+        System.out.println("Request Come"+quiz);
         return quizService.createQuiz(quiz);
     }
 
